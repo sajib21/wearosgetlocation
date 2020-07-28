@@ -11,64 +11,80 @@
     tools:deviceIds="wear">
 
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bt_location"
-            android:text="Get Location"
-            />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="3in">
+            android:layout_marginTop="20px">
 
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bt_location"
+                    android:text="Get Location"
+                    />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="32dp">
+                    android:layout_marginTop="10px">
 
                         <TextView
                             android:layout_width="10dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:id="@+id/text_view1"/>
+                            android:background="@color/black"
+                            android:layout_margin="10px"
+                            android:id="@+id/text_view1"
+                            android:text="Latitude:"/>
 
                         <TextView
                             android:layout_width="10dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:id="@+id/text_view2"/>
+                            android:background="@color/black"
+                            android:layout_margin="10px"
+                            android:id="@+id/text_view2"
+                            android:text="Longitude"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="16dp">
+                    android:layout_marginTop="10px">
 
                         <TextView
                             android:layout_width="10dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:id="@+id/text_view3"/>
+                            android:background="@color/black"
+                            android:layout_margin="10px"
+                            android:id="@+id/text_view3"
+                            android:text="Country"/>
 
                         <TextView
                             android:layout_width="10dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:id="@+id/text_view4"/>
+                            android:background="@color/black"
+                            android:layout_margin="10px"
+                            android:id="@+id/text_view4"
+                            android:text="Locality"/>
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:id="@+id/text_view5"/>
+                    android:background="@color/black"
+                    android:layout_margin="15px"
+                    android:id="@+id/text_view5"
+                    android:text="Address"/>
 
         </LinearLayout>
 

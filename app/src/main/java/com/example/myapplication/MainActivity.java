@@ -43,6 +43,22 @@ public class MainActivity extends WearableActivity {
         textView4 = (TextView) findViewById(R.id.text_view4);
         textView5 = (TextView) findViewById(R.id.text_view5);
 
+//        textView1.setText(Html.fromHtml(
+//                "<font><b><Latitude :</b><br/></font>"
+//        ));
+//        textView2.setText(Html.fromHtml(
+//                "<font><b><Longitude :</b><br/></font>"
+//        ));
+//        textView3.setText(Html.fromHtml(
+//                "<font><b><Country Name :</b><br/></font>"
+//        ));
+//        textView4.setText(Html.fromHtml(
+//                "<font><b><Locality :</b><br/></font>"
+//        ));
+//        textView5.setText(Html.fromHtml(
+//                "<font><b><Address :</b><br/></font>"
+//        ));
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         btLocation.setOnClickListener(new View.OnClickListener() {
@@ -90,26 +106,12 @@ public class MainActivity extends WearableActivity {
                         List<Address> addresses = geocoder.getFromLocation(
                                 location.getLatitude(), location.getLongitude(), 1
                         );
-                        textView1.setText(Html.fromHtml(
-                                "<font color='#6200EE'><b><Latitude :</b><br></font>"
-                                        + addresses.get(0).getLatitude()
-                        ));
-                        textView2.setText(Html.fromHtml(
-                                "<font color='#6200EE'><b><Longitude :</b><br></font>"
-                                        + addresses.get(0).getLongitude()
-                        ));
-                        textView3.setText(Html.fromHtml(
-                                "<font color='#6200EE'><b><Country Name :</b><br></font>"
-                                        + addresses.get(0).getCountryName()
-                        ));
-                        textView4.setText(Html.fromHtml(
-                                "<font color='#6200EE'><b><Locality :</b><br></font>"
-                                        + addresses.get(0).getLocality()
-                        ));
-                        textView5.setText(Html.fromHtml(
-                                "<font color='#6200EE'><b><Address :</b><br></font>"
-                                        + addresses.get(0).getAddressLine(0)
-                        ));
+                        textView1.setText("Latitude : " + addresses.get(0).getLatitude());
+                        textView1.setText("Longitude : " + addresses.get(0).getLongitude());
+                        textView1.setText("Country : " + addresses.get(0).getCountryName());
+                        textView1.setText("Locality : " + addresses.get(0).getLocality());
+                        textView1.setText("Address : " + addresses.get(0).getAddressLine(0));
+
                         System.out.print("TRY: "+ textView1.getText() + " " + textView2.getText());
                     } catch (IOException e) {
                         e.printStackTrace();
